@@ -35,7 +35,9 @@ public static partial class AttributesExtensions {
         
         static IObservable<Unit> EditorAliasDisabledInDetailViewAttribute(this ApplicationModulesManager manager)
             => manager.WhenGeneratingModelNodes<IModelViewItems>()
-                .SelectMany(items => items.OfType<IModelPropertyEditor>().Where(editor => editor.ModelMember.MemberInfo.FindAttribute<EditorAliasAttribute>()!=null)
+                .SelectMany(items => items.OfType<IModelPropertyEditor>()
+                    .Where(editor => editor.ModelMember != null)  // Fix: Null check for compatibility with model builders that may create editors with null ModelMember
+                    .Where(editor => editor.ModelMember.MemberInfo.FindAttribute<EditorAliasAttribute>()!=null)
                     .Do(editor => {
                         var attribute = editor.ModelMember.MemberInfo.FindAttribute<EditorAliasDisabledInDetailViewAttribute>();
                         if (attribute==null)return;
