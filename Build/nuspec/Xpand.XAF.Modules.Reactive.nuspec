@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>Xpand.XAF.Modules.Reactive</id>
-    <version>4.252.3.0</version>
-    <authors>eXpandFramework</authors>
+    <version>4.252.4-gbt-fix</version>
+    <authors>eXpandFramework, Georges Boss (fork)</authors>
     <owners>eXpandFramework</owners>
     <licenseUrl>https://github.com/eXpandFramework/DevExpress.XAF/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/eXpandFramework/Reactive.XAF/blob/master/src/Modules/Reactive</projectUrl>
     <iconUrl>http://sign.expandframework.com</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The `Reactive` module provides a XAF DSL API for functional/stateless implementations.</description>
+    <description>The `Reactive` module provides a XAF DSL API for functional/stateless implementations. [FORK] Includes GBT.Builders compatibility fix (ModelMember null check).</description>
     <releaseNotes>https://github.com/eXpandFramework/Reactive.XAF/releases</releaseNotes>
     <copyright>eXpandFramework.com</copyright>
     <tags>DevExpress XAF modules, eXpandFramework, XAF, eXpressApp, Reactive, 25.2.5</tags>
